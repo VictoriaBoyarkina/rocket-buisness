@@ -4,29 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./slide.css" />
+    <link rel="stylesheet" href="./style.min.css" />
   </head>
   <body>
+    <!-- toast message -->
+    <div id="toast"></div>
     <!-- pop-up form -->
     <button class="open-button btn btn-green">
       Написать нам
       <img src="./img/mail-icon.svg" alt="mail-icon" class="mail-icon" />
     </button>
     <div class="form-popup" id="myForm">
-      <form action="send.php" method="post" class="form-container">
+      <form method="post" class="form-container">
         <input type="text" placeholder="Ваше имя" name="name" required />
         <input type="text" placeholder="Введите почту" name="email" required />
         <textarea
           rows="2"
-          placeholder="Ваше сообщение"
+          placeholder="Ваше сообщениe"
           name="text"
           required
         ></textarea>
-        <button type="submit" class="btn btn-green">Отправить</button>
-        <button type="submit" class="btn btn-white" onclick="closeForm()">
-          Закрыть
-        </button>
+        <button type="submit" id="send" class="btn btn-green" onclick="sendEmail()" disabled>Отправить</button>
+        <button type="button" class="btn btn-white" onclick="closeForm()">Закрыть</button>
       </form>
     </div>
     <header class="header">
@@ -208,21 +207,10 @@
         </div>
       </div>
     </footer>
-    <?php
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $text = $_POST['text'];
-
-        echo $name;
-        echo $email;
-        echo $text;
-      ?>
   </body>
   <script src="index.js"></script>
+  <script scr="send.php"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      new Slider(document.querySelector(".carousel"));
-    });
     document.addEventListener("DOMContentLoaded", function () {
       new Menu(document.getElementById("menu"));
     });

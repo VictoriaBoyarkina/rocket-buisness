@@ -1,5 +1,5 @@
 <?php
-// echo 'test'; die();
+
 // Allow from any origin
 if (isset($_SERVER['HTTP_ORIGIN'])) {
     header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
@@ -22,8 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 require __DIR__ . './../public/vendor/autoload.php';
 //require '/../public/vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+//$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+//$dotenv->load();
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;

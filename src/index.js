@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", function () {
+  new Menu(document.getElementById("menu"));
+});
 // Slider
 const slider = document.querySelector(".slider");
 const prevButton = document.querySelector(".prev-button");
@@ -108,6 +111,11 @@ const emailInput = document.querySelector("[name=email]");
 const textInput = document.querySelector("[name=text]");
 
 const submitBtn = document.getElementById("send");
+const closeFormBtn = document.getElementById("closeForm");
+
+submitBtn.addEventListener("click", () => sendEmail());
+
+closeFormBtn.addEventListener("click", () => closeForm())
 
 // Function to disable submit button
 function disableSubmitButton() {
@@ -132,12 +140,13 @@ function sendEmail() {
   disableSubmitButton();
   var formData = new FormData(document.querySelector("form"));
 
-  fetch("send.php", {
-    method: "POST",
+  fetch(("http://localhost:8000/send.php"), {
+    method: 'POST',
     body: formData,
   })
     .then((response) => {
       if (!response.ok) {
+        console.log(response)
         throw new Error("Network response was not ok");
       }
       return response.text();

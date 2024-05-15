@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.min.css" />
+    <title>Rocket Buisness</title>
+    <link rel="stylesheet" href="./css/style.min.css" />
   </head>
   <body>
     <!-- toast message -->
@@ -24,8 +24,8 @@
           name="text"
           required
         ></textarea>
-        <button type="submit" id="send" class="btn btn-green" onclick="sendEmail()" disabled>Отправить</button>
-        <button type="button" class="btn btn-white" onclick="closeForm()">Закрыть</button>
+        <button type="submit" id="send" class="btn btn-green" disabled>Отправить</button>
+        <button type="button" id="closeForm" class="btn btn-white">Закрыть</button>
       </form>
     </div>
     <header class="header">
@@ -208,11 +208,5 @@
       </div>
     </footer>
   </body>
-  <script src="index.js"></script>
-  <script scr="send.php"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      new Menu(document.getElementById("menu"));
-    });
-  </script>
+  <script type="module" src="index.js"></script>
 </html>

@@ -47,7 +47,7 @@ $text = isset($_POST['text']) ? htmlspecialchars($_POST['text']) : '';
 $username = $_ENV['SMTP_USERNAME'];
 $password = $_ENV['SMTP_PASSWORD'];
 
-echo 'username and password = ' . $username . ' ' . $password;  die();
+echo ' username and password = ' . $username . ' ' . $password;  die();
 
 
 // SMTP configuration

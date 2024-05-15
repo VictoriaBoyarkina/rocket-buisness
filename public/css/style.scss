@@ -539,8 +539,7 @@ img {
 }
 
 /* Поля ввода полной ширины */
-.form-container input[type="text"],
-.form-container textarea {
+.input {
   width: 100%;
   padding: 10px;
   margin: 5px 0 15px 0;
@@ -549,8 +548,7 @@ img {
 }
 
 /* Когда входы получают фокус, сделайте что-нибудь */
-.form-container input[type="text"]:focus,
-.form-container textarea:focus {
+.input:focus {
   background-color: #e1e1e1;
   outline: none;
 }

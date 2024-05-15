@@ -59,9 +59,17 @@ export default {
       patterns: [
         { from: "src/css", to: "public/css" },
       ],
+      patterns: [
+        { from: "src/vendor", to: "public/vendor" },
+      ],
+      patterns: [
+        { from: "src/.env", to: "public.env" },
+      ],
+      patterns: [
+        { from: "src/send.php", to: "send.php" },
+      ],
     }),
   ],
-
   devServer: {
     static: {
       directory: path.join(__dirname, 'src'),

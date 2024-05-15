@@ -140,7 +140,7 @@ function sendEmail() {
   disableSubmitButton();
   var formData = new FormData(document.querySelector("form"));
 
-  fetch(("http://localhost:8000/send.php"), {
+  fetch(("send.php"), {
     method: 'POST',
     body: formData,
   })

@@ -5,7 +5,7 @@
     "serve": "php -S localhost:8000",
     "start": "webpack serve",
     "build": "webpack",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d public"
   },
   "devDependencies": {
     "@babel/core": "^7.24.5",

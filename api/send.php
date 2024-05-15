@@ -19,8 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit(0);
 }
 
-require __DIR__ . './../public/vendor/autoload.php';
-//require '/../public/vendor/autoload.php';
+//require __DIR__ . './../public/vendor/autoload.php';
+require './../public/vendor/autoload.php';
 
 //$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 //$dotenv->load();

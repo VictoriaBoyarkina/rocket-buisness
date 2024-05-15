@@ -49,6 +49,17 @@ export default {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
+    new CopyPlugin({
+      patterns: [
+        { from: "src/img", to: "public/img" },
+      ],
+      patterns: [
+        { from: "src/fonts", to: "public/fonts" },
+      ],
+      patterns: [
+        { from: "src/css", to: "public/css" },
+      ],
+    }),
   ],
 
   devServer: {

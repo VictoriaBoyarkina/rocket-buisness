@@ -24,17 +24,18 @@ require './vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
 
 //require './vendor/phpmailer/phpmailer/src/Exception.php';
 //require './vendor/phpmailer/phpmailer/src/PHPMailer.php';
 //require './vendor/phpmailer/phpmailer/src/SMTP.php';
 
-require './vendor/phpmailer/phpmailer/src/Exception.php';
-require './vendor/phpmailer/phpmailer/src/PHPMailer.php';
-require './vendor/phpmailer/phpmailer/src/SMTP.php';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+
+require_once('Exception.php');
+require_once('PHPMailer.php');
+require_once('SMTP.php');
 
 $mail = new PHPMailer();
 

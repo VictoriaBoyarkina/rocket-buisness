@@ -48,10 +48,9 @@ $password = $_ENV['SMTP_PASSWORD'];
 
 //echo ' username and password = ' . $username . ' ' . $password;  die();
 
-
 // SMTP configuration
 $mail->isSMTP();
-$mail->Host = 'smtp.yandex.ru';
+$mail->Host = 'ssl://smtp.yandex.ru';
 $mail->SMTPAuth = true;
 $mail->Username = $username; // Your Yandex username
 $mail->Password = $password; // Your Yandex password

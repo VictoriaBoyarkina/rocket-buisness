@@ -19,15 +19,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 }
 
 // require __DIR__ . '/vendor/autoload.php';
-require './vendor/autoload.php';
+// require './vendor/autoload.php';
+require_once('autoload.php');
+
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
-
-
-//require './vendor/phpmailer/phpmailer/src/Exception.php';
-//require './vendor/phpmailer/phpmailer/src/PHPMailer.php';
-//require './vendor/phpmailer/phpmailer/src/SMTP.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -36,6 +33,10 @@ use PHPMailer\PHPMailer\SMTP;
 require_once('Exception.php');
 require_once('PHPMailer.php');
 require_once('SMTP.php');
+
+//require './vendor/phpmailer/phpmailer/src/Exception.php';
+//require './vendor/phpmailer/phpmailer/src/PHPMailer.php';
+//require './vendor/phpmailer/phpmailer/src/SMTP.php';
 
 $mail = new PHPMailer();
 

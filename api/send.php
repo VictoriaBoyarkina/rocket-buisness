@@ -1,5 +1,4 @@
 <?php
-echo 'test55';
 // Allow from any origin
 if (isset($_SERVER['HTTP_ORIGIN'])) {
     header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
@@ -19,11 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit(0);
 }
 
-//require __DIR__ . './../public/vendor/autoload.php';
-require './../public/vendor/autoload.php';
+//require __DIR__ . '/vendor/autoload.php';
+require './../vendor/autoload.php';
 
-//$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-//$dotenv->load();
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -33,9 +32,9 @@ use PHPMailer\PHPMailer\SMTP;
 //require './vendor/phpmailer/phpmailer/src/PHPMailer.php';
 //require './vendor/phpmailer/phpmailer/src/SMTP.php';
 
-require './..public/vendor/phpmailer/phpmailer/src/Exception.php';
-require './..public/vendor/phpmailer/phpmailer/src/PHPMailer.php';
-require './..public/vendor/phpmailer/phpmailer/src/SMTP.php';
+require './../vendor/phpmailer/phpmailer/src/Exception.php';
+require './../vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require './../vendor/phpmailer/phpmailer/src/SMTP.php';
 
 $mail = new PHPMailer();
 
@@ -47,7 +46,7 @@ $text = isset($_POST['text']) ? htmlspecialchars($_POST['text']) : '';
 $username = $_ENV['SMTP_USERNAME'];
 $password = $_ENV['SMTP_PASSWORD'];
 
-echo ' username and password = ' . $username . ' ' . $password;  die();
+//echo ' username and password = ' . $username . ' ' . $password;  die();
 
 
 // SMTP configuration

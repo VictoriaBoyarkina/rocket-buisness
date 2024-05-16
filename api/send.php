@@ -20,11 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 
 // require __DIR__ . '/vendor/autoload.php';
 // require './vendor/autoload.php';
-require_once('autoload.php');
-
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;

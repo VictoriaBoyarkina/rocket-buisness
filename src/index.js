@@ -153,6 +153,7 @@ function sendEmail() {
     })
     .then((data) => {
       if (data.includes("failed")) {
+        console.log(data);
         throw new Error("Что-то пошло не так");
       }
       console.log(data);

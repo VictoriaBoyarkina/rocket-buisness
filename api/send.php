@@ -46,8 +46,8 @@ $text = isset($_POST['text']) ? htmlspecialchars($_POST['text']) : '';
 $mail->isSMTP();
 $mail->Host = 'ssl://smtp.yandex.ru';
 $mail->SMTPAuth = true;
-$mail->Username = vicka.boyarkina; // Your Yandex username
-$mail->Password = xuibthxbdjrwspvo; // Your Yandex password
+$mail->Username = 'vicka.boyarkina'; // Your Yandex username
+$mail->Password = 'xuibthxbdjrwspvo'; // Your Yandex password
 $mail->SMTPSecure = 'ssl'; // Enable SSL encryption
 $mail->Port = 465; // Port for SSL
 

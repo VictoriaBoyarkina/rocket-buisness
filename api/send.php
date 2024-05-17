@@ -56,7 +56,7 @@ $mail->Port = 465; // Port for SSL
 $mail->setFrom('vicka.boyarkina@yandex.ru', 'Your Name'); // Replace with your email address and name
 
 // Recipient
-$mail->addAddress('vicka.boyarkina@yandex.ru', 'rocket-buisness'); // Recipient email and name
+$mail->addAddress('rbru-metrika@yandex.ru', 'rocket-buisness'); // Recipient email and name
 
 // Email subject and body
 $mail->Subject = 'Обратная связь';

@@ -92,7 +92,7 @@ function showToast(type, message) {
 
 // Pop-up form
 function openForm() {
-  document.getElementById("myForm").style.display = "block";
+  document.getElementById("myForm").style.display = "flex";
 }
 
 function closeForm() {
